@@ -126,4 +126,5 @@ Finally, the agent solves the track.
 
 [1] [Car Racing](https://gymnasium.farama.org/environments/box2d/car_racing/) \
 [2] [Human-level control through deep reinforcement learning](https://www.nature.com/articles/nature14236) \
-[2] [Learning values across many orders of magnitude](https://arxiv.org/pdf/1602.07714.pdf)
+[2] [Learning values across many orders of magnitude](https://arxiv.org/pdf/1602.07714.pdf) \
+[CleanRL](https://docs.cleanrl.dev/)

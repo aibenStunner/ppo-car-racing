@@ -24,11 +24,11 @@ The image below shows the original observation (left) and the resulting frame fo
 
 Usually, **clipping the action** helps achieve a lower variance which is generally better for continuous control tasks like this one.
 
-The **MaxAndSkipEnv** wrapper skips 4 frames by default, repeats the agent's last action on the skipped frames, and sums up the rewards in the skipped frames. Such a **frame-skipping technique** should considerably speed up the algorithm because the environment step is computationally cheaper than the agent's forward pass. [[1]](#references)
+The **MaxAndSkipEnv** wrapper skips 4 frames by default, repeats the agent's last action on the skipped frames, and sums up the rewards in the skipped frames. Such a **frame-skipping technique** should considerably speed up the algorithm because the environment step is computationally cheaper than the agent's forward pass [[1]](#references).
 
-**Normalizing the observation space and reward** is also a good idea. The observation space is used as input to the neural network of the agent, and normalizing the input is beneficial for many reasons (e.g. increases convergence speed, aids computer precision, prevents divergence of parameters, etc.). [[2]](#references)
+**Normalizing the observation space and reward** is also a good idea. The observation space is used as input to the neural network of the agent, and normalizing the input is beneficial for many reasons (e.g. increases convergence speed, aids computer precision, prevents divergence of parameters, etc.) [[2]](#references).
 
-Also, normalizing the returns improves stability. We can tell from backpropagation equations that the returns directly affect the gradients and thus, we would like to keep its values in a specific convenient range. This prevents backpropagation from leading the network weights to extreme values. [[3]](#references)
+Also, normalizing the returns improves stability. We can tell from backpropagation equations that the returns directly affect the gradients and thus, we would like to keep its values in a specific convenient range. This prevents backpropagation from leading the network weights to extreme values [[3]](#references).
 
 ## Why PPO?
 
@@ -124,6 +124,6 @@ Finally, the agent solves the track.
 
 ## References
 
-[1] [Car Racing](https://gymnasium.farama.org/environments/box2d/car_racing/)
-[2] [Human-level control through deep reinforcement learning](https://www.nature.com/articles/nature14236)
+[1] [Car Racing](https://gymnasium.farama.org/environments/box2d/car_racing/) \
+[2] [Human-level control through deep reinforcement learning](https://www.nature.com/articles/nature14236) \
 [2] [Learning values across many orders of magnitude](https://arxiv.org/pdf/1602.07714.pdf)

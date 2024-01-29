@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "ppo-car-racing"
+version = "0.1.0"
+description = "Solving the Gym Car Racing with Proximal Policy Optimization (PPO)"
+authors = ["aibenStunner <ebenezergadri99@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+torch = "^2.1.1"
+tensorboard = "^2.15.1"
+wandb = "^0.16.0"
+gym = {extras = ["box2d"], version = "^0.26.2"}
+moviepy = "^1.0.3"
+pygame = "^2.1.0"
+tyro = "^0.6.2"
+opencv-python = "^4.9.0.80"
+packaging = "^23.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

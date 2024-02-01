@@ -32,7 +32,7 @@ Also, normalizing the returns improves stability. We can tell from backpropagati
 
 ## Why PPO?
 
-PPO is one of the most popular and robust Deep Reinforcement Learning (DRL) algorithms. It can be adapted to be asynchronous, which gives us the ability to leverage vector (parallel) environments to improve convergence by reducing the correlation between samples and running reasonably fast.
+PPO is one of the most popular and robust Deep Reinforcement Learning (DRL) algorithms. It can be adapted to be asynchronous, allowing us to leverage vector (parallel) environments to improve convergence by reducing the correlation between samples and running reasonably fast.
 
 ## Installation
 
@@ -54,7 +54,7 @@ PPO is one of the most popular and robust Deep Reinforcement Learning (DRL) algo
     $ poetry install --no-root
 ```
 
-4. Run the following to get list arguments for environment (algorithm specific (hyperparameters) and experiment arguments)
+4. Run the following to get list arguments for the environment (algorithm specific (hyperparameters) and experiment arguments)
 
 ```sh
     $ python train.py --help
@@ -80,7 +80,7 @@ Here are some intriguing behaviors I discovered in my trained model.
 
 ### Going Backwards
 
-The agent recovers from slipping but ends up going backward in the wrong direction.
+The agent recovers from slipping but goes backward in the wrong direction.
 
 <p align="center">
   <img src="https://github.com/aibenStunner/ppo-car-racing/assets/42221332/24342d4a-2219-4e83-bb11-8d7dfb1000a5" />
@@ -88,7 +88,7 @@ The agent recovers from slipping but ends up going backward in the wrong directi
 
 ### Recovery
 
-Here, the agent recovers form slipping, and returns to right on track
+Here, the agent recovers from slipping and returns to the right track
 
 <p align="center">
   <img src="https://github.com/aibenStunner/ppo-car-racing/assets/42221332/346db1e4-2896-4028-af59-1e9315d87a6c" />
@@ -96,7 +96,7 @@ Here, the agent recovers form slipping, and returns to right on track
 
 ### Double Recovery
 
-This is rather interesting behavior exhibited by the agent. The agent first slips and spins but spins again and returns right on track.
+This is a rather interesting behavior exhibited by the agent. The agent first slips and spins but spins again and returns right on track.
 
 <p align="center">
   <img src="https://github.com/aibenStunner/ppo-car-racing/assets/42221332/b0b1965f-3e45-42a6-8a1f-e0898964a4ec" />
@@ -104,7 +104,7 @@ This is rather interesting behavior exhibited by the agent. The agent first slip
 
 ### Safe behavior
 
-This is a behavior exhibited by the agent when it does not want to go out of the track while learning. It is efficient if the agent wants to only over all the track and doesn't care about time or speed.
+This is a behavior exhibited by the agent when it does not want to go out of the track while learning. It is efficient if the agent wants to only cover all of the track and doesn't care about time or speed.
 
 <p align="center">
   <img src="https://github.com/aibenStunner/ppo-car-racing/assets/42221332/91a76d85-92ff-458a-a3d7-1d13142b6cee" />
